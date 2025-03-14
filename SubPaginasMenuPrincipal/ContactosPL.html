@@ -11,13 +11,36 @@
 <body>
     <div class="container">
         <h1 class="center-text">Contacto</h1>
-        <section class="form-register">
-            <input class="controls" type="email" name="correo" id="correo" placeholder="Correo">
-            <input class="controls" type="text" name="Nombre" id="nombres" placeholder="Nombre">
-            <input class="controls" type="text" name="Telefono" id="Telefono" placeholder="Telefono">
-            <p>Estoy de acuerdo con los <a href=""> Terminos y condiciones</a></p>
+        <form class="form-register" action="https://formspree.io/f/mldjdeqp" method="POST">
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Correo" required>
+            <input class="controls" type="text" name="Nombre" id="nombres" placeholder="Nombre" required>
+            <input class="controls" type="text" name="Telefono" id="Telefono" placeholder="Telefono (opcional)">
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree"> Estoy de acuerdo con los <a href="">Terminos y condiciones</a></label>
             <input class="botons" type="submit" value="Registrar">
-        </section>
+        </form>
     </div>
+
+    <script>
+        document.querySelector('.form-register').addEventListener('submit', function(event) {
+            event.preventDefault();
+            fetch(this.action, {
+            method: this.method,
+            body: new FormData(this),
+            headers: {
+                'Accept': 'application/json'
+            }
+            }).then(response => {
+            if (response.ok) {
+                alert('Registro exitoso. Redirigiendo a la página principal...');
+                window.location.href = '/index.html';
+            } else {
+                alert('Hubo un error al enviar el formulario.');
+            }
+            }).catch(error => {
+            alert('Hubo un error al enviar el formulario.');
+            });
+        });
+    </script>
 </body>
 </html>
