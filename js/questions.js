@@ -12,7 +12,7 @@
             question.children[0].classList.toggle('questions__arrow--rotate');
 
             if(answer.clientHeight === 0){
-                height = answer.scrollHeight;
+                height = 85;
             }
 
             answer.style.height = `${height}px`;

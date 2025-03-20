@@ -375,6 +375,7 @@ body{
     overflow: hidden ;
 }
 
+
 .questions_title{
     text-align: left;
     display: flex;
@@ -407,7 +408,7 @@ body{
     height: 0;
     transition: height .3s;
     color: white;
-
+    
 }
 
 .questions_img{
