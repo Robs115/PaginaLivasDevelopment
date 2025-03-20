@@ -418,6 +418,7 @@ body{
     width: 60%;
     margin: 0 auto;
     margin-bottom: 30px;
+    color: white
 }
 
 /*footer*/
@@ -509,7 +510,24 @@ body{
     width: 30px;
 }
 
-/* Media queries */
+
+
+@keyframes popup{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 8rem;
+        height: 8rem;
+
+    }
+    100%{
+        width: 6.6rem;
+        height: 6.6rem;
+    }
+}
+    /* Media queries */
 
 @media (max-width:800px){
     .nav_menu{
