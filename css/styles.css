@@ -10,6 +10,24 @@ body{
     background-color:  #21211F;
 }
 
+.BotonArriba{
+    background-color: #c0a241;
+    padding: 15px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 35px;
+    right: 30px;
+    transition: .3s ease;
+}
+.BotonArriba:hover{
+    transform: translateY(-3px);
+}
+
+.logo_BotonArriba{
+    color: white;
+    width: auto; 
+    height: auto;
+}
 
 .container{
     width: 90%;
@@ -436,12 +454,13 @@ body{
 
 .footer_title, .footer_newsletter{
     color: #fff;
+
 }
 
 
 .footer_container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-bottom: 1px solid #c0a241;
     padding-bottom: 60px;
@@ -449,10 +468,12 @@ body{
 
 .nav--footer{
     padding-bottom: 20px;
+    align-items: center;
     display: grid;
     gap: 1em;
     grid-auto-flow: row;
     height: 100%;
+
 }
 
 .nav_link--footer{
@@ -460,6 +481,7 @@ body{
     margin: 0;
     margin-right: 20px;
     flex-wrap: wrap;
+    padding-left: 15px;
 }
 
 .footer_inputs{
@@ -531,6 +553,17 @@ body{
     /* Media queries */
 
 @media (max-width:800px){
+
+    .BotonArriba{
+        background-color: #c0a241;
+        padding: 10px;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 35px;
+        right: 30px;
+        transition: .3s ease;
+    }
+
     .nav_menu{
         display: block;
     }
@@ -641,6 +674,17 @@ body{
 }
 
 @media (max-width: 600px){  
+
+    .BotonArriba{
+        background-color: #c0a241;
+        padding: 5px;
+        border-radius: 50%;
+        position: fixed;
+        bottom: 35px;
+        right: 30px;
+        transition: .3s ease;
+    }
+
     
     .hero_title{
         font-size: 2rem;
