@@ -191,6 +191,7 @@ body{
 
 .about_icon{
     width: 40px;
+    filter: invert(63%) sepia(55%) saturate(463%) hue-rotate(8deg) brightness(93%) contrast(87%);
 }
 
 /*knowledge*/
